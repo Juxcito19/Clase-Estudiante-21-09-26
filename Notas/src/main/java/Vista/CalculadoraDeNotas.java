@@ -32,6 +32,13 @@ public class CalculadoraDeNotas {
 
         for (int i = 0; i < cantidadEstudiantes; i++) {
 
+            estudiantes[i].incrementarNotaDesarrollo(cifraIncremento);
+            estudiantes[i].calcularDefinitiva();
+
+        }
+
+        for (int i = 0; i < cantidadEstudiantes; i++) {
+
             estudiantes[i].mostrarSiSuperaLimite(notaLimite);
 
         }

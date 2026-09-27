@@ -127,4 +127,12 @@ public class Calculadora {
         } while (cifra < 0.0 || cifra > 0.5);
         return cifra;
     }
+
+    public void incrementarNotaDesarrollo(double cifra) {
+        if (notaDesarrollo + cifra > 5.0) {
+            notaDesarrollo = 5.0;
+        } else {
+            notaDesarrollo = notaDesarrollo + cifra;
+        }
+    }
 }
