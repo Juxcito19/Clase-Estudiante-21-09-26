@@ -77,4 +77,25 @@ public class Calculadora {
         );
         return cantidad;
     }
+
+    public Calculadora ingresarEstudiante() {
+
+        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante");
+
+        String id = JOptionPane.showInputDialog("Ingrese el código del estudiante");
+
+        double notad = Double.parseDouble(
+                JOptionPane.showInputDialog("Digite la nota de Desarrollo")
+        );
+
+        double notam = Double.parseDouble(
+                JOptionPane.showInputDialog("Digite la nota de Matemáticas")
+        );
+
+        Calculadora estudiante = new Calculadora(id, nombre, notad, notam);
+
+        estudiante.calcularDefinitiva();
+
+        return estudiante;
+    }
 }
