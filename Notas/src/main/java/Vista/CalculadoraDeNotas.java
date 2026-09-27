@@ -26,9 +26,11 @@ public class CalculadoraDeNotas {
 
         }
 
+        double notaLimite = miCalculadora.pedirNotaLimite();
+
         for (int i = 0; i < cantidadEstudiantes; i++) {
 
-            estudiantes[i].mostrarNota();
+            estudiantes[i].mostrarSiSuperaLimite(notaLimite);
 
         }
     }

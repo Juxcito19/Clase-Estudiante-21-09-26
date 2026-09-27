@@ -98,4 +98,23 @@ public class Calculadora {
 
         return estudiante;
     }
+
+    public double pedirNotaLimite() {
+        double notaLimite;
+        do {
+            notaLimite = Double.parseDouble(
+                    JOptionPane.showInputDialog("Ingrese la notaLimite (entre 0.0 y 4.9)")
+            );
+        } while (notaLimite < 0.0 || notaLimite > 4.9);
+        return notaLimite;
+    }
+
+    public void mostrarSiSuperaLimite(double notaLimite) {
+        if (definitiva > notaLimite) {
+            JOptionPane.showMessageDialog(null,
+                    "Codigo: " + id
+                    + "\nNombre: " + nombre
+                    + "\nNota definitiva: " + definitiva);
+        }
+    }
 }
