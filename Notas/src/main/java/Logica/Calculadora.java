@@ -117,4 +117,14 @@ public class Calculadora {
                     + "\nNota definitiva: " + definitiva);
         }
     }
+
+    public double pedirCifraIncremento() {
+        double cifra;
+        do {
+            cifra = Double.parseDouble(
+                    JOptionPane.showInputDialog("Ingrese la cifra de incremento (entre 0.0 y 0.5)")
+            );
+        } while (cifra < 0.0 || cifra > 0.5);
+        return cifra;
+    }
 }

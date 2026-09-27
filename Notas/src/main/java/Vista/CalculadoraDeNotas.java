@@ -28,6 +28,8 @@ public class CalculadoraDeNotas {
 
         double notaLimite = miCalculadora.pedirNotaLimite();
 
+        double cifraIncremento = miCalculadora.pedirCifraIncremento();
+
         for (int i = 0; i < cantidadEstudiantes; i++) {
 
             estudiantes[i].mostrarSiSuperaLimite(notaLimite);
