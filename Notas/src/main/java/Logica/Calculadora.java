@@ -3,26 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Logica;
+
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class Calculadora {
+
     private String id;
     private String nombre;
     private double notaDesarrollo;
     private double notaMatematica;
     private double definitiva;
-    
+
     public Calculadora(String id, String nombre, double notad, double notam) {
 
-    this.id = id;
-    this.nombre = nombre;
-    this.notaDesarrollo = notad;
-    this.notaMatematica = notam;
-       
-}
+        this.id = id;
+        this.nombre = nombre;
+        this.notaDesarrollo = notad;
+        this.notaMatematica = notam;
+
+    }
+
     public String getId() {
         return id;
     }
@@ -54,15 +58,23 @@ public class Calculadora {
     public void setNotaMatematica(double notaMatematica) {
         this.notaMatematica = notaMatematica;
     }
-    
-    public double calcularDefinitiva(){
+
+    public double calcularDefinitiva() {
         definitiva = notaMatematica * 0.4 + notaDesarrollo * 0.6;
         return definitiva;
-    
-    
     }
-    
-    public void mostrarNota(){
-        JOptionPane.showMessageDialog(null, "Nombre: " + nombre +"\nCodigo: " + id + "\nNota definitiva: " + definitiva);
+
+    public void mostrarNota() {
+        JOptionPane.showMessageDialog(null,
+                "Nombre: " + nombre
+                + "\nCodigo: " + id
+                + "\nNota definitiva: " + definitiva);
+    }
+
+    public int pedirNumeroEstudiantes() {
+        int cantidad = Integer.parseInt(
+                JOptionPane.showInputDialog("Ingrese el número de estudiantes")
+        );
+        return cantidad;
     }
 }
